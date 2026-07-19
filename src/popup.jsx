@@ -2,6 +2,7 @@ import "./style.css"
 import SearchBar from "./components/searchBar"
 import PerfumeCard from "./components/perfumeCard"
 import { useEffect, useState } from "react"
+import { API_BASE_URL } from "./config"
 
 const SkeletonCard = () => (
   <div className="overflow-hidden rounded-[28px] border border-stone-200 bg-white p-4 shadow-sm animate-pulse">
@@ -68,15 +69,15 @@ function Popup() {
     setError(null)
 
     try {
-      const res = await fetch(`http://localhost:5000/api/search?q=${encodeURIComponent(query)}`)
+      const res = await fetch(`${API_BASE_URL}/api/search?q=${encodeURIComponent(query)}`)
       if (!res.ok) {
-        throw new Error("Could not fetch recommendations. Ensure the backend server is running.")
+        throw new Error(`Server returned status ${res.status}`)
       }
       const data = await res.json()
       setResults(data)
     } catch (err) {
       console.error("Fetch recommendations failed:", err)
-      setError(err.message || "Failed to fetch matches from server.")
+      setError("The recommendation backend is currently unavailable. Please check your connection or try again shortly.")
     } finally {
       setIsLoading(false)
     }

@@ -33,7 +33,8 @@
       "storage"
     ],
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "https://dupeifyy.onrender.com/*"
     ]
   }
 }
