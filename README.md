@@ -55,6 +55,9 @@ npm run dev
 ## images
 images
 
+## Deployed Link
+https://dupeifyy.onrender.com
+
 ## Learning Outcomes
 Browser extension development
 DOM scraping and webpage parsing
