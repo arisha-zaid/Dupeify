@@ -1,4 +1,6 @@
-const PerfumeCard=({ item })=>{
+import SimilarityRing from "./similarityRing"
+
+const PerfumeCard = ({ item }) => {
   return (
     <div className="overflow-hidden rounded-[28px] border border-stone-300 bg-white shadow-[0_18px_40px_rgba(28,25,23,0.08)]">
       <div className="border-b border-stone-200 bg-[linear-gradient(135deg,_rgba(245,158,11,0.14),_rgba(255,255,255,0.9)_45%,_rgba(41,37,36,0.04))] p-4">
@@ -26,9 +28,7 @@ const PerfumeCard=({ item })=>{
                 </h2>
               </div>
 
-              <div className="rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">
-                {item.similarity}
-              </div>
+              <SimilarityRing similarity={item.similarity} />
             </div>
 
             <p className="mt-2 text-xs leading-5 text-stone-500">
