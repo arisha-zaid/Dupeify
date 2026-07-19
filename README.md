@@ -52,7 +52,7 @@ npm install
 ## Start development
 npm run dev
 
-###images 
+## images
 images
 
 ## Learning Outcomes
