@@ -66,6 +66,14 @@ app.get('/health', (req, res) => {
   res.json({ status: 'healthy', index: indexName });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Dupeify API is running",
+    health: "/health",
+    search: "/api/search?q=dior"
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
