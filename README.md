@@ -31,14 +31,6 @@ Product text is converted into embeddings.
 Vector similarity search is performed.
 Matching perfume dupes are displayed to the user.
 
-## Folder Structure
-src/
- ├── components/
- ├── popup/
- ├── content/
- ├── background/
- ├── services/
- └── utils/
 
 ## Future Improvements
 Multi-category support beyond perfumes
@@ -61,7 +53,7 @@ npm install
 npm run dev
 
 ###images 
-src/img
+images
 
 ## Learning Outcomes
 Browser extension development
